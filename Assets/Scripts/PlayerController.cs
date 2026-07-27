@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 15f; // mức độ nhảy cao của player
     [SerializeField] private LayerMask groundLayer; // lớp mặt đất để kiểm tra va chạm với player
     [SerializeField] private Transform groundCheck; // vị trí kiểm tra va chạm với mặt đất
+    private Animator animator; // biến animator để lưu trữ Animator của player (Để sử dung được component đó ở trên Unity ta cần khai báo biến)
 
     private bool isGrounded; // biến isGrounded để kiểm tra xem player có đang đứng trên mặt đất hay không
 
     private Rigidbody2D rb; // biến rb để lưu trữ Rigidbody2D của player (Để sử dung được component đó ở trên Unity ta cần khai báo biến)
     private void Awake()
     {
+        animator = GetComponent<Animator>(); // lấy Animator của player
         rb = GetComponent<Rigidbody2D>(); // lấy Rigidbody2D của player
     }
 
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement(); // gọi hàm HandleMovement để xử lý di chuyển của player
         HandleJump(); // gọi hàm HandleJump để xử lý nhảy của player
+        UpdateAnimator(); // gọi hàm UpdateAnimator để cập nhật trạng thái của Animator
     }
 
     // Hàm HandleMovement để xử lý di chuyển của player
@@ -57,5 +60,13 @@ public class PlayerController : MonoBehaviour
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer); // kiểm tra va chạm với mặt đất bằng cách tạo một hình tròn nhỏ tại vị trí groundCheck và kiểm tra xem có va chạm với lớp groundLayer hay không
+    }
+
+    private void UpdateAnimator()
+    {
+        bool isRunning = Mathf.Abs(rb.linearVelocity.x) > 0.1f; // kiểm tra xem player có đang chạy hay không dựa trên vận tốc theo trục x
+        bool isJumping = !isGrounded; // kiểm tra xem player có đang nhảy hay không dựa trên trạng thái isGrounded
+        animator.SetBool("isRunning", isRunning); // cập nhật trạng thái isRunning trong Animator
+        animator.SetBool("isJumping", isJumping); // cập nhật trạng thái isJumping trong Animator
     }
 }

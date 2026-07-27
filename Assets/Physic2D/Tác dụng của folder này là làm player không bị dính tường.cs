@@ -1,0 +1,1 @@
+//Tác dụng của folder này là làm player không bị dính tường
