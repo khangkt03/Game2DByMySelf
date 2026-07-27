@@ -57,6 +57,9 @@ TagManager:
   - name: Item
     uniqueID: 3256728417
     locked: 0
+  - name: UI
+    uniqueID: 3253599675
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
