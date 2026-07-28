@@ -12,10 +12,16 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded; // biến isGrounded để kiểm tra xem player có đang đứng trên mặt đất hay không
 
     private Rigidbody2D rb; // biến rb để lưu trữ Rigidbody2D của player (Để sử dung được component đó ở trên Unity ta cần khai báo biến)
+    private GameManager gameManager; // biến gameManager để lưu trữ tham chiếu đến GameManager
+
+    private AudioManager audioManager; // biến audioManager để lưu trữ tham chiếu đến AudioManager
+
     private void Awake()
     {
         animator = GetComponent<Animator>(); // lấy Animator của player
         rb = GetComponent<Rigidbody2D>(); // lấy Rigidbody2D của player
+        gameManager = FindAnyObjectByType<GameManager>(); // tìm kiếm đối tượng GameManager trong scene và lấy component Gamemanager
+        audioManager = FindAnyObjectByType<AudioManager>(); // tìm kiếm đối tượng AudioManager trong scene và lấy component AudioManager
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,6 +33,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.IsGameOver() || gameManager.IsGameWin()) // kiểm tra xem trò chơi đã kết thúc hay chưa
+        {
+            return; // nếu đã kết thúc thì không thực hiện các hành động tiếp theo
+        }
         HandleMovement(); // gọi hàm HandleMovement để xử lý di chuyển của player
         HandleJump(); // gọi hàm HandleJump để xử lý nhảy của player
         UpdateAnimator(); // gọi hàm UpdateAnimator để cập nhật trạng thái của Animator
@@ -55,6 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded) // kiểm tra nếu người chơi nhấn nút nhảy và player đang đứng trên mặt đất
         {
+            audioManager.PlayJumpSound(); // gọi phương thức PlayJumpSound để phát âm thanh khi nhảy
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // đặt lại vận tốc theo trục y về jumpForce 
 
         }

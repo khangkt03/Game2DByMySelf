@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5092985044917686442
+--- !u!1 &3748532460009212481
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4157224437692782686}
-  - component: {fileID: 942110519896341198}
-  - component: {fileID: 1115508698020523609}
-  - component: {fileID: 4376760827716386715}
+  - component: {fileID: 1510159829345062912}
+  - component: {fileID: 685913366360069409}
+  - component: {fileID: 2958832162400242269}
+  - component: {fileID: 8836355208547513558}
   m_Layer: 0
-  m_Name: Coin
-  m_TagString: Coin
+  m_Name: Key
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4157224437692782686
+--- !u!4 &1510159829345062912
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5092985044917686442}
+  m_GameObject: {fileID: 3748532460009212481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.59, y: 0.63, z: 0}
+  m_LocalPosition: {x: 0.2151, y: 1.0849, z: 0}
   m_LocalScale: {x: 1.2978617, y: 1.4465767, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &942110519896341198
+--- !u!212 &685913366360069409
 SpriteRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5092985044917686442}
+  m_GameObject: {fileID: 3748532460009212481}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3338749442709606003, guid: dad9bab82435b3d41949bd694150544d, type: 3}
+  m_Sprite: {fileID: 1694913177206695654, guid: e6a2a856779a4cf4b90925fe67d47739, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,13 +94,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!58 &1115508698020523609
+--- !u!58 &2958832162400242269
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5092985044917686442}
+  m_GameObject: {fileID: 3748532460009212481}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -129,15 +129,15 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.3
---- !u!95 &4376760827716386715
+  m_Radius: 0.4
+--- !u!95 &8836355208547513558
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5092985044917686442}
+  m_GameObject: {fileID: 3748532460009212481}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 43159f46daf48ab448ed61eae41a160c, type: 2}
