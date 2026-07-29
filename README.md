@@ -11,6 +11,12 @@
 Một tựa game <b>2D Platformer</b> được phát triển bằng <b>Unity</b> và <b>C#</b>.
 </p>
 
+# 👨‍💻 Tác giả
+
+**Trần Duy Khang**
+
+GitHub: https://github.com/khangkt03
+
 ---
 # 📥 Tải game
 
@@ -19,6 +25,11 @@ Bạn có thể tải phiên bản mới nhất tại:
 **👉 Release:**  
 https://github.com/khangkt03/Game2DByMySelf/releases/tag/GameByKhang
 
+## Gameplay
+
+![Gameplay](![alt text](image-1.png))
+
+---
 # 📖 Giới thiệu
 
 **Game2DByMySelf** là dự án cá nhân được thực hiện nhằm học tập và rèn luyện kỹ năng phát triển game 2D với Unity.
@@ -52,10 +63,6 @@ Trong quá trình thực hiện, mình đã xây dựng các chức năng cơ b�
 # 📸 Hình ảnh trong game
 
 > Thay các ảnh dưới đây bằng ảnh chụp màn hình game của bạn.
-
-## Gameplay
-
-![Gameplay](![alt text](image-1.png))
 
 
 ### Cách chơi
@@ -102,14 +109,6 @@ Assets
 - Menu tạm dừng
 - Hệ thống lưu điểm
 - Phiên bản dành cho thiết bị di động
-
----
-
-# 👨‍💻 Tác giả
-
-**Trần Duy Khang**
-
-GitHub: https://github.com/khangkt03
 
 ---
 
